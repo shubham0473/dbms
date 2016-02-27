@@ -1,0 +1,11 @@
+<h1>Home</h1>
+
+<p>This is home </p>
+
+<a href="/main/Blog/">Blog</a>
+
+{% if user.is_authenticated %}
+	<a href="/main/logout/"> Logout </a>
+{% else %}
+	<a href="/main/login/?next = {{ request.path}}">Login</a>
+{% endif %}
